@@ -5,7 +5,7 @@ class TestApiPoint extends FastExpress {
     super(port);
   }
   async test() {
-    return "ok";
+    return JSON.stringify({ status: true });
   }
 }
 

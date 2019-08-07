@@ -11,6 +11,8 @@
   "dependencies": {
     "@karakulov-web-dev/fast-express": "^1.0.2",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^0.19.1"
+    "http-proxy-middleware": "^0.19.1",
+    "memory-cache": "^0.2.0",
+    "zlib": "^1.0.5"
   }
 }
