@@ -38,7 +38,10 @@ app.use(
       });
       proxyRes.on("end", function() {
         const bodyString = zlib.gunzipSync(originalBody).toString("utf8");
-        mcache.put(req.originalUrl, bodyString,  h);
+        let body = JSON.parse(bodyString);
+        if (!body.error) {
+          mcache.put(req.originalUrl, bodyString, 4 * h);
+        }
       });
     }
   })
