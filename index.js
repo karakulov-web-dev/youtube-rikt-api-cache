@@ -40,7 +40,7 @@ app.use(
         const bodyString = zlib.gunzipSync(originalBody).toString("utf8");
         let body = JSON.parse(bodyString);
         if (!body.error) {
-          mcache.put(req.originalUrl, bodyString, 4 * h);
+          mcache.put(req.originalUrl, bodyString, 8 * h);
         }
       });
     }
